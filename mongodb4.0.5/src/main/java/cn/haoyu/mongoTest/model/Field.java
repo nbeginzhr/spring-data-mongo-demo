@@ -20,6 +20,7 @@ public class Field implements Serializable {
     private String title;
     private String subheading;
     private List<CommonField> embedFields;
+    private List<Biz> bizs;
     private Date createTime;
 
     @Id
@@ -77,6 +78,14 @@ public class Field implements Serializable {
 
     public void setEmbedFields(List<CommonField> embedFields) {
         this.embedFields = embedFields;
+    }
+
+    public List<Biz> getBizs() {
+        return bizs;
+    }
+
+    public void setBizs(List<Biz> bizs) {
+        this.bizs = bizs;
     }
 
     public Date getCreateTime() {
