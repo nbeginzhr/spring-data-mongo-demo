@@ -17,7 +17,7 @@ public class MongoConfig extends AbstractMongoConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        return new MongoClient(new MongoClientURI("mongodb://192.168.116.147:27018,192.168.116.147:27019,192.168.116.147:27020/teamis?replicaSet=haoyu"));
+        return new MongoClient(new MongoClientURI("mongodb://localhost:27117,localhost:27217,localhost:27317/teamis?replicaSet=haoyuSet"));
     }
 
     @Override

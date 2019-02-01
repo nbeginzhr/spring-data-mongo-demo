@@ -8,6 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.beans.IntrospectionException;
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * Created by haoyu on 2019/1/7.
  */
@@ -27,6 +30,18 @@ public class MongoTestController {
     @GetMapping(value = "/api/mongo/get")
     public ResponseEntity<Object> get(){
         return ResponseEntity.ok(fieldBiz.fetch());
+    }
+
+    @GetMapping(value = "/api/embed/test")
+    public ResponseEntity<Object> embedTest(){
+        fieldBiz.embedDocumentOperate();
+        return ResponseEntity.ok("success");
+    }
+
+    @GetMapping(value = "/api/embed/update")
+    public ResponseEntity<Object> epdateEmbedTest() throws Exception {
+        fieldBiz.updateEmbedArray();
+        return ResponseEntity.ok("success");
     }
 
 

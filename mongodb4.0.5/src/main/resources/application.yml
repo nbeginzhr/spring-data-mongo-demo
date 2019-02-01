@@ -1,7 +1,7 @@
 server:
   port: 9092
   servlet:
-    context-path: /mongoTest
+    context-path: /mongo
 
 spring:
   application:
@@ -13,5 +13,5 @@ spring:
       force: true
   data:
     mongodb:
-      uri: mongodb://192.168.116.147:27018,192.168.116.147:27019,192.168.116.147:27320/teamis?replicaSet=haoyu
+      uri: mongodb://localhost:27117,localhost:27217,localhost:27317/teamis?replicaSet=haoyuSet
 
